@@ -1,1 +1,62 @@
 /* fill in styling here */
+
+.inputFields{
+    display: flex;
+    flex-direction: row;
+}
+
+.calculator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+
+.numInput{
+    margin: 0px;
+    padding: 0px;
+}
+
+.numHeader{
+    margin: 0px;
+    padding: 0px; 
+}
+
+.numDiv{
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.equalClearBtns{
+    margin-top: 20px;
+    border: 0px solid black;
+}
+
+#equalBtn{
+    background-color: #1a73e8;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 7px;
+    border: 0px solid grey;
+    border-right: 2px solid grey;
+    border-bottom: 2px solid grey;
+    color: white;
+    padding: 3px 10px;
+}
+
+#clearBtn{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 7px;
+    border: 0px solid grey;
+    border-right: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding: 3px 10px;
+    
+}
