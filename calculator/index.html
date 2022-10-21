@@ -4,6 +4,7 @@
         <title>Calculator</title>
         <script type="text/javascript" src="controller.js"></script>
         <script type="text/javascript" src="calculator.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="calculator.css" />
     </head>
     <body>
@@ -26,8 +27,8 @@
                 <label for="multiply"><input id="multiply" type="radio" name="asdm">Multiply</label>           
             </div>
             <div class="equalClearDiv"> 
-                <button id="equalBtn" class="equalClearBtns">=</button>
-                <button id="clearBtn" class="equalClearBtns">Clear</button>
+                <button id="equalBtn" class="equalClearBtns" onclick="calculate()">=</button>
+                <button id="clearBtn" class="equalClearBtns" onclick="clear()">Clear</button>
             </div>
         </div>
     </body>

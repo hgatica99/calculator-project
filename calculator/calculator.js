@@ -1,4 +1,4 @@
-class Calculator {
+export class Calculator {
     firstNumber;
     secondNumber;
     operator;
@@ -12,7 +12,8 @@ class Calculator {
     }
 
     // determine the current operation's label
-    getAction() {}
+    getAction() {
+    }
 
     // performa a calculation based on the currently selected operation
     operate() {}
