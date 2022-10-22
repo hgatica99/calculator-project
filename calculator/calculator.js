@@ -12,7 +12,7 @@ export class Calculator {
     }
 
     // determine the current operation's label
-    getAction() {}
+    // getAction() {}
 
     // performa a calculation based on the currently selected operation
     operate() {
@@ -30,29 +30,32 @@ export class Calculator {
 
     // perform addition operation
     add() {
-        console.log('addition')
         this.value = this.firstNumber + this.secondNumber
+        return true
     }
     
     // perform subtraction operation
     subtract() {
         console.log('subtraction')
         this.value = this.firstNumber - this.secondNumber
+        return true
     }
 
     // perform multiplication operation
     multiply() {
         console.log('multiplication')
         this.value = this.firstNumber * this.secondNumber
+        return true
     }
 
     // perform divide operation
     divide() {
         console.log('division')
         if (this.secondNumber == 0){
-            console.log("Can't divide by 0")
+            return false
         } else {
         this.value = this.firstNumber/this.secondNumber
+        return true
         }
     }
 }

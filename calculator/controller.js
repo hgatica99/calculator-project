@@ -3,9 +3,12 @@ import { Calculator } from "./calculator.js";
 // Setup variables and get a calculator instance
 let equalBtn = document.getElementById('equalBtn')
 let clearBtn = document.getElementById('clearBtn')
+let statement = document.getElementById('statement')
 let firstNum = ''
 let secondNum = ''
 let operator = ''
+let finalPhase = ''
+
 const myCalculator = new Calculator();
 
 equalBtn.addEventListener("click", calculate);
@@ -32,10 +35,25 @@ function calculate() {
         myCalculator.firstNumber = Number(firstNum)
         myCalculator.secondNumber = Number(secondNum)
         myCalculator.operator = operator
-        myCalculator.operate()
-        console.log(myCalculator.value)
-    } else {
-        console.log("Please enter only numbers")
+        if(myCalculator.operate()){
+            let finalStringBit = `${myCalculator.firstNumber} and ${myCalculator.secondNumber} is ${myCalculator.value}`
+
+            switch (myCalculator.operator){
+                case 'add': statement.textContent = `The result of adding ${finalStringBit}`;
+                break;
+                case 'subtract': statement.textContent = `The result of subtracting ${finalStringBit}`;
+                break;
+                case 'multiply': statement.textContent = `The result of multiplying ${finalStringBit}`;
+                break;
+                case 'divide': statement.textContent = `The result of dividing ${finalStringBit}`;
+                break;
+            }
+        } else {
+            statement.textContent = "You can't divide by 0"
+            clearValues();
+        } bnjmklp[     } else {
+        statement.textContent = "Please enter only numbers"
+        clearValues();
     }
 }
 
@@ -50,6 +68,7 @@ function clearValues() {
     document.getElementById('firstNum').value = ' ';
     document.getElementById('secondNum').value = ' ';
     document.getElementById('add').checked = true;
+    document.getElementById('statement').textContent = '';
 }
 
 /**

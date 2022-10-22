@@ -60,3 +60,7 @@
     padding: 3px 10px;
     
 }
+
+.equalClearBtns:hover{
+    cursor: pointer;
+}
