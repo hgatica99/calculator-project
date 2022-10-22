@@ -1,8 +1,8 @@
 import { Calculator } from "./calculator.js";
 
 // Setup variables and get a calculator instance
-let equalBtn = document.getElementById('equalBtn');
-let clearBtn = document.getElementById('clearBtn');
+let equalBtn = document.getElementById('equalBtn')
+let clearBtn = document.getElementById('clearBtn')
 let firstNum = ''
 let secondNum = ''
 let operator = ''
