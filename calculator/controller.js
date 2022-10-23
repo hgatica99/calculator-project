@@ -4,12 +4,11 @@ import { Calculator } from "./calculator.js";
 let equalBtn = document.getElementById('equalBtn')
 let clearBtn = document.getElementById('clearBtn')
 let statement = document.getElementById('statement')
-let firstNum = ''
-let secondNum = ''
-let operator = ''
-let finalPhase = ''
+let firstNum;
+let secondNum;
+let operator;
 
-const myCalculator = new Calculator();
+const myCalculator = new Calculator(0, 0, 'add');
 
 equalBtn.addEventListener("click", calculate);
 clearBtn.addEventListener("click", clearValues);
@@ -27,13 +26,13 @@ function checkIfNumber(x, y){
 
 // Perform a calculation when the operator button is clicked
 function calculate() {
-    firstNum = document.getElementById('firstNum').value
-    secondNum = document.getElementById('secondNum').value
+    firstNum = Number(document.getElementById('firstNum').value)
+    secondNum = Number(document.getElementById('secondNum').value)
     operator = getOperator();
     // Check if both input fields are numbers
     if(checkIfNumber(firstNum, secondNum)){
-        myCalculator.firstNumber = Number(firstNum)
-        myCalculator.secondNumber = Number(secondNum)
+        myCalculator.firstNumber = firstNum
+        myCalculator.secondNumber = secondNum
         myCalculator.operator = operator
         if(myCalculator.operate()){
             let finalStringBit = `${myCalculator.firstNumber} and ${myCalculator.secondNumber} is ${myCalculator.value}`
@@ -49,11 +48,12 @@ function calculate() {
                 break;
             }
         } else {
-            statement.textContent = "You can't divide by 0"
             clearValues();
-        } bnjmklp[     } else {
-        statement.textContent = "Please enter only numbers"
+            statement.textContent = "You can't divide by 0"
+        } 
+    } else {
         clearValues();
+        statement.textContent = "Please enter only numbers"
     }
 }
 

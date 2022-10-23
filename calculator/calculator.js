@@ -17,40 +17,37 @@ export class Calculator {
     // performa a calculation based on the currently selected operation
     operate() {
         switch (this.operator){
-            case 'add': this.add();
-            break;
-            case 'subtract': this.subtract();
-            break;
-            case 'multiply': this.multiply();
-            break;
-            case 'divide': this.divide();
-            break;
+            case 'add':  return this.add();
+            case 'subtract': return this.subtract();
+            case 'multiply': return this.multiply();
+            case 'divide': return this.divide();
         }
     }
 
     // perform addition operation
     add() {
+        console.log('a')
         this.value = this.firstNumber + this.secondNumber
         return true
     }
     
     // perform subtraction operation
     subtract() {
-        console.log('subtraction')
+        console.log('s')
         this.value = this.firstNumber - this.secondNumber
         return true
     }
 
     // perform multiplication operation
     multiply() {
-        console.log('multiplication')
+        console.log('m')
         this.value = this.firstNumber * this.secondNumber
         return true
     }
 
     // perform divide operation
     divide() {
-        console.log('division')
+        console.log('d')
         if (this.secondNumber == 0){
             return false
         } else {
