@@ -1,9 +1,9 @@
 import { Calculator } from "./calculator.js";
 
 // Setup variables and get a calculator instance
-let equalBtn = document.getElementById('equalBtn')
-let clearBtn = document.getElementById('clearBtn')
-let statement = document.getElementById('statement')
+let equalBtn = document.getElementById('equalBtn');
+let clearBtn = document.getElementById('clearBtn');
+let statement = document.getElementById('statement');
 let firstNum;
 let secondNum;
 let operator;
@@ -26,8 +26,8 @@ function checkIfNumber(x, y){
 
 // Perform a calculation when the operator button is clicked
 function calculate() {
-    firstNum = Number(document.getElementById('firstNum').value)
-    secondNum = Number(document.getElementById('secondNum').value)
+    firstNum = Number(document.getElementById('firstNum').value);
+    secondNum = Number(document.getElementById('secondNum').value);
     operator = getOperator();
     // Check if both input fields are numbers
     if(checkIfNumber(firstNum, secondNum)){
